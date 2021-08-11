@@ -9,6 +9,8 @@ pipeline {
                             sh 'pwd'
                             sh 'ls -l'
             sh 'ssh -o StrictHostKeyChecking=no nbf@www.blindeforbundet.no uptime'
+                            sh 'scp Jenkinsfile nbf@www.blindeforbundet.no:~'
+            
 
         }
             }
