@@ -5,6 +5,10 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
+                        sshagent(credentials : ['nbf']) {
+            sh 'ssh -o StrictHostKeyChecking=no nbf@www.blindeforbundet.no uptime'
+
+        }
             }
         }
     }
