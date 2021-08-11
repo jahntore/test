@@ -6,6 +6,8 @@ pipeline {
             steps {
                 sh 'python --version'
                         sshagent(credentials : ['nbf']) {
+                            sh 'pwd'
+                            sh 'ls -l'
             sh 'ssh -o StrictHostKeyChecking=no nbf@www.blindeforbundet.no uptime'
 
         }
